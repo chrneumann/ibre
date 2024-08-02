@@ -2,6 +2,19 @@
 
 Ibre is an experimental in browser routing engine for road networks.
 
+It uses a transport network stored in Mapbox Vector Tiles (in a PMTiles
+container).
+
+##  Usage
+
+See `doc/examples`
+
+### 🛠️ Build with `wasm-pack build`
+
+```
+wasm-pack build
+```
+
 ## License
 
 Copyright (C) 2024 Christian Neumann

@@ -1,0 +1,41 @@
+[package]
+name = "ibre"
+version = "0.1.0"
+authors = ["Christian Neumann <cneumann@codingmobility.net>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+console_error_panic_hook = ["dep:console_error_panic_hook"]
+debug = []
+
+[dependencies]
+wasm-bindgen = "0.2.84"
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+console_error_panic_hook = { version = "0.1.7", optional = true }
+geo = "0.28.0"
+web-sys = { version = "0.3.69", features = ["console", "Window", "Request", "RequestInit", "RequestMode", "Response"] }
+mvt-reader = { version = "1.4.0", features = ["wasm"] }
+serde_json = "1.0.120"
+mercantile = "0.0.1"
+mvt = "0.9.3"
+wasm-bindgen-futures = "0.4.42"
+bytes = "1.6.1"
+js-sys = "0.3.69"
+thiserror = "1.0.63"
+futures = "0.3.30"
+lru = "0.12.4"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.34"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

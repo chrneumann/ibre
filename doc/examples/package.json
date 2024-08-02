@@ -1,0 +1,19 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "source": "helloworld.html",
+  "scripts": {
+    "start": "parcel serve --watch-dir=../../"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "ibre": "link:../../pkg",
+    "maplibre-gl": "^4.5.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
