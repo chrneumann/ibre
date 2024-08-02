@@ -1,6 +1,7 @@
 # IBRE - In Browser Routing Engine
 
-Ibre is an experimental in browser routing engine for road networks.
+Ibre is an experimental in browser routing engine for road networks. It's implemented
+in Rust and compiled to WebAssembly.
 
 It uses a transport network stored in Mapbox Vector Tiles (in a PMTiles
 container).
